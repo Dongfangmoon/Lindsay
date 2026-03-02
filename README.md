@@ -1,1 +1,1 @@
-涉及到SpringBoot知识点、参数校验框架Validation，缓存技术redis，认证技术jwt，单元测试junit，数据库框架mybatis
+该大事件项目涉及SpringBoot、参数校验框架Validation，缓存技术redis，认证技术jwt，单元测试junit，数据库框架mybatis。
