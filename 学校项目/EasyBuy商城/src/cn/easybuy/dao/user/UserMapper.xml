@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "mybatis-3-mapper.dtd" >
+ <mapper namespace = "cn.easybuy.dao.user.UserDao">
+ 
+ 	<select id = "getUser" resultType="User">
+ 		select id,loginName,password,userName,sex,identityCode,email,mobile,type 
+ 		from easybuy_user 
+ 		<where>
+			<if test="id != null and id != 0"> and id = #{id}</if>
+			<if test="loginName != null and loginName != ''"> and loginName = #{loginName}</if>
+		</where>
+ 	</select>
+ 	
+ 	<insert id = "add" parameterType="User">
+ 		INSERT into easybuy_user(loginName,userName,password,sex,identityCode,email,mobile) 
+ 		values(#{loginName},#{userName},#{password},#{sex},#{identityCode},#{email},#{mobile}) 
+ 	</insert>
+ 	
+ 	<update id = "update" parameterType="User">
+ 		UPDATE easybuy_user 
+ 		SET loginName = #{loginName},userName = #{userName},
+ 		type = #{type},sex = #{sex}, identityCode = #{identityCode}, email = #{email}, 
+ 		mobile = #{mobile} WHERE id = #{id}
+ 	</update>
+ 	
+	<delete id="deleteUserById" >
+		delete from easybuy_user where id = #{id}
+	</delete>
+	
+ </mapper>
