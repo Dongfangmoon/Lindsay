@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet"type="text/css"href="css/aoyun.css" />
+		<style type="text/css" >
+			body{background:#ffffff;}
+			header{width: 100%;height: 40px;background:#F2F2F2;z-index: 999;}
+			.con{height: 40px;margin: 0 auto;margin-right: 50px;}
+			.right1{margin-top: 10px;float: right;}
+			header a{margin-right: 10px;}
+			
+			nav{width:102%;margin-left:10%;margin-right: 7.8%;}
+			nav ul{height:0px;list-style: none;}
+			nav	li{padding:10px;width:14.7%;display: inline-block;float: left;background-color:lightblue;text-align: center;}
+			nav	li a{display: inline-block;float: left;color: #fff;text-indent: 10px;text-decoration:none;}
+			.tu1{width: 80%;}
+			
+			.imgBox{width: 80%;height: 800px;margin: 0 auto;border-top: 2px solid cadetblue;}
+			.imgBox img{width: 100%;height: 650px;border:outset 1px #6495ED;margin: 0 auto;padding-top: 30px;}
+			.img1{display: block;}
+			.img2{display: none;}
+			.img3{display: none;}
+			.img4{display: none;}
+			.img5{display: none;}
+			
+			h1{width:300px;height: 50px;border: inset 2px powderblue;text-align: center;border-radius:50px;margin-top:100px auto 0;box-sizing: border-box;margin-top: 20px;}
+			.box1{width: 80%;height: 530px;border: solid 1px lightblue;margin-left: 10%;}
+			div.box1 ul{margin: 70px auto 0;width: 960px;}
+			div.box1 ul li{width: 266px;height: 250px;border: 1px solid #ccc;background:url(img/aoyun1.jpg);background-size: 266px 250px;float: left;margin-right: 8%;margin-bottom:40px;position: relative;overflow: hidden;}
+			div.box1 ul li:nth-child(2){background-image: url(img/素材-624913232.jpg);}
+			div.box1 ul li:nth-child(3){margin-right: 0;background-image: url(img/素材-2118528176.jpg);}
+			div.box1 ul li hgroup{position: absolute;left: 0;top: -250px;width: 266px;height: 250px;background: rgba(0,0,0,0.5);transition: all 0.5s ease-in 0s;}
+			div.box1 ul li:hover hgroup{position: absolute;left: 0;top: 0;}
+			div.box1 ul li hgroup h2:nth-child(1){font-size: 22px;text-align: center;color: #fff;font-weight: normal;margin-top: 58px;}
+			div.box1 ul li hgroup h2:nth-child(2){font-size:14px;text-align: center;	color: #fff;font-weight: normal;margin-top: 58px;}
+			
+			.box2{width: 80%;height: 530px;border: solid 1px lightblue;margin-left: 10%;}
+			.box2 ul{margin:70px auto 0;width: 960px;}
+			.box2 ul li{width:291px;height:251px;float: left;margin-right:4%;margin-bottom: 40px;position: relative;background-size: 266px 250px;perspective: 5000px;transform-style: preserve-3d;transition: all 1s ease 0s;	}
+			.box2 ul li:hover{transform: rotateX(-90deg);-ms-transform: rotate(-90deg);-webkit-transform: rotateX(-90deg);-moz-transform: rotateX(-90deg);-o-transform: rotateX(-90deg);}
+			.box2 ul li img{width: 266px;height: 250px;position: absolute;left:0;top:0;	}
+			.box2 ul li img.fan{transform: translateZ(100px);-ms-transform: rotateZ(100px);-webkit-transform: rotateZ(100px);-moz-transform: rotateZ(100px);-o-transform:rotateZ(100px);z-index: 2;}
+			.box2 ul li:hover img.zheng{transform: rotateX(90deg) translateZ(100px);-ms-transform: rotateX(90deg) translateZ(100px);-webkit-transform: rotateX(90deg) translateZ(100px);-o-transform:rotateX(90deg)translateZ(100px);} 			
+			
+			.box3{width: 80%;height: 530px;border: solid 1px lightblue;margin-left: 10%;}
+			.box3 ul{margin:70px auto 0;width: 960px;}
+			.box3 ul li{width:190px;height:190px;border-radius: 50%;float: left;margin-right:5%;margin-bottom: 40px;position: relative;}
+			.box3 ul li img{width:190px;height:190px;position: absolute;top:30%;left:50%;transform:translate(-50%,-50%);border-radius: 50%;}
+			.box3 ul li:nth-child(4),.text ul li:nth-child(8){margin-right:0;}
+			.box3 ul li .tihuan{opacity: 0;transition:all 0.4s ease-in 0.2s;	}
+			.box3 ul li:hover .tihuan{opacity: 1;transform:translate(-50%,-50%) scale(0.75);	}
+			.box3 ul li .tu{transition:all 0.4s ease-in 0s;}
+			.box3 ul li:hover .tu{opacity: 0;transform:translate(-50%,-50%) scale(0.5);}
+			
+			footer{width: 100%;height: 400px;background:lightblue;border-bottom: 1px solid #fff;}
+			.logo{width:50px;margin-left:1000px;width:1000px;height:100px;margin:0 auto;background: url(img/0b55b319ebc4b74543a911dd9eb109178a82b801bfe1.png) no-repeat center center;background-size: 40px;border-bottom: 1px solid #fff;}
+			.message{width: 1000px;margin: 20px auto 0;color:#fffada;}
+			.left{width: 525px;float: left;padding-left:30px ;box-sizing: border-box;}
+			footer li{float: left;margin-right: 30px;}
+			footer li input{width: 215px;height: 32px;border-radius: 5px;margin: 10px 0 15px 0;padding-left: 10px;box-sizing: border-box;border: none;}
+			footer li:last-child input{width: 120px;height: 39px;padding-left: 0;border:none;background: url(img/but.jpg) 0 0 no-repeat;}
+			.right{float: left;}
+			footer p{margin-bottom: 10px;}
+			footer textarea{width: 400px;height: 172px;padding: 10px;box-sizing: border-box;resize: none;}
+			
+			.banquan{width: 100%;height: 60px;background: #333333;text-align: center;}
+		</style>
+		<script> 
+    	window.onload = function(){ 
+        var images = document.getElementById('m').getElementsByTagName('img'); 
+        var pos = 0; 
+        var len = images.length; 
+        setInterval(function(){ 
+            images[pos].style.display = 'none';
+            pos = ++pos == len ? 0 : pos;
+            images[pos].style.display = 'inline';
+        },2500); 
+    }; 
+
+</script>
+	</head>
+	<body>
+		<header><div class="con">
+			<section class="right1"><a href="#">登录</a>
+				<a href="#">注册</a>
+			</section></div></header>
+		<nav>
+			<ul>
+				<li><a href="#"><font color="black">商城首页</font></a></li>
+				<li><a href="#"><font color="black">纪念勋章</font></a></li>
+				<li><a href="#"><font color="black">周边首饰</font></a></li>
+				<li><a href="#"><font color="black">周边好物</font></a></li>
+				<li><a href="#"><font color="black">奥运相关</font></a></li>
+				</ul>
+		</nav>
+		<div align="center"><img src="img/dongao.png" class="tu1"/></div>
+		<div class="imgBox" id="m">
+			<img src="img/6f3dbbc36ba7034529c09496764ecb71.jpeg"alt="1"class="img-slide img1" />
+			<img src="img/1568879666722176.jpg"alt="2" class="img-slide img2"/>
+			<img src="img/gundong.png"alt="3"class="img-slide img3"/>
+			<img src="img/gundong2.png"alt="4" class="img-slide img4"/>
+			<img src="img/c660273c515b37cd1a6aebe704eac10e.jpeg"alt="5" class="img-slide img5"/>
+		</div>
+		
+		<div class="box1"align="center">
+			<h1>纪念勋章</h1>
+			<ul type="none">
+				<li>
+					<hgroup>
+						<h2>国旗会徽组合</h2>
+						<h2>北京2022冬奥会特许商品</h2>
+						<h2></h2>
+						<h2></h2>
+					</hgroup>
+				</li>
+				<li>
+					<hgroup>
+						<h2>双京冬奥组合</h2>
+						<h2>中国体育代表团出征东京</h2>
+						<h2></h2>
+						<h2></h2>
+					</hgroup>
+				</li>
+				<li>
+					<hgroup>
+						<h2>倒计时冰熠章</h2>
+						<h2>北京2022冬奥会倒计时系列</h2>
+						<h2></h2>
+						<h2></h2>
+					</hgroup>
+				</li>
+			</ul>
+		</div>
+		<div align="center"class="box2">
+			<h1>精美饰品</h1>
+				<ul type="none">
+		<li>
+			<img class="zheng" src="img/fan1.jpg" alt="">
+			<img class="fan" src="img/素材-1491146946.jpg" alt="">
+		</li>
+		<li>
+			<img class="zheng" src="img/fan2 .jpg" alt="">
+			<img class="fan" src="img/素材-562509860.jpg" alt="">
+		</li>
+		<li>
+			<img class="zheng" src="img/fan3.jpg" alt="">
+			<img class="fan" src="img/素材192031024.jpg" alt="">
+		</li>
+	</ul>
+		</div>
+		<div align="center"class="box3">
+			<h1>推荐单品</h1>
+		<ul>
+		<li>
+			<img  class="tu" src="img/c660273c515b37cd1a6aebe704eac10e.jpeg" alt="">
+			<img class="tihuan" src="img/素材-368087189.jpg" alt="">
+		</li>
+		<li>
+			<img class="tu" src="img/素材-1390995817.jpg" alt="">
+			<img class="tihuan" src="img/素材-37225386.jpg" alt="">
+		</li>
+		<li>
+			<img class="tu" src="img/素材-704981846.jpg" alt="">
+			<img class="tihuan" src="img/素材1047179631.jpg" alt="">
+		</li>
+		<li>
+			<img class="tu" src="img/素材-175164367.jpg" alt="">
+			<img class="tihuan" src="img/素材899561730.jpg" alt="">
+		</li>
+		<li>
+			<img class="tu" src="img/素材-624913232.jpg" alt="">
+			<img class="tihuan" src="img/素材-2086443274.jpg" alt="">
+		</li>
+		<li>
+			<img class="tu" src="img/素材-562509860.jpg" alt="">
+			<img class="tihuan" src="img/素材830617566.jpg" alt="">
+		</li>
+		<li>
+			<img class="tu" src="img/素材-915643731.jpg" alt="">
+			<img class="tihuan" src="img/素材837672488.jpg" alt="">
+		</li>
+		<li>
+			<img class="tu" src="img/素材1963639344.jpg" alt="">
+			<img class="tihuan" src="img/素材274213898.jpg" alt="">
+		</li>
+	</ul>
+		</div>
+		<br/>
+		<br/>
+		<br />
+		<footer>
+			<div class="logo"></div>
+			<hr/>
+			<div class="message">
+				<form>
+					<ul class="left"type="none">
+						<li><p><label for="">姓名：</label></p><input type="text"></li>
+						<li><p>邮箱：</p><input type="email"></li>
+						<li><p>电话：</p><input type="tel"pattern="^\d{11}$"title="请输入11位数字"></li>
+						<li><p>密码：</p><input type="password"></li>
+						<li><input type="but"value=""/></li>
+					</ul>
+					<div class="right"><p>留言：</p><textarea></textarea></div>
+				</form>
+			</div>
+		</footer>
+		<div class="banquan"><a href="#">2022北京冬奥会旗舰店</a></div>
+	</body>
+	</script>
+</html>

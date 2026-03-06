@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "mybatis-3-mapper.dtd" >
+ <mapper namespace = "cn.easybuy.dao.product.ProductDao">
+
+ 	<select id="getProductById" resultType="Product">
+ 		select id,name,description,price,stock,categoryLevel1Id,categoryLevel2Id,categoryLevel3Id,fileName,isDelete 
+ 		from easybuy_product 
+ 		<where>
+ 			<if test="id != null and id != 0"> and id = #{id}</if>
+ 		</where>
+ 	</select>
+ 
+ 	<insert id="add" parameterType="Product">
+ 		insert into easybuy_product(name,description,price,stock,categoryLevel1Id,categoryLevel2Id,categoryLevel3Id,fileName,isDelete)
+ 		values(#{name},#{description},#{price},#{stock},#{categoryLevel1Id},#{categoryLevel2Id},#{categoryLevel3Id},#{fileName},#{isDelete})
+ 	</insert>
+ 	
+	<update id = "update" parameterType="Product">
+		 update easybuy_product set 
+		 name=#{name},fileName=#{fileName},categoryLevel1Id=#{categoryLevel1Id},categoryLevel2Id=#{categoryLevel2Id},categoryLevel3Id=#{categoryLevel3Id} 
+		 where id=#{id}
+	</update>
+	
+ </mapper>
