@@ -1,0 +1,20 @@
+package com.itheima.service;
+
+
+import com.itheima.pojo.Article;
+import com.itheima.pojo.PageBean;
+import org.springframework.stereotype.Service;
+
+
+public interface ArticleService {
+
+    void add(Article article);
+
+    PageBean<Article> list(Integer pageNum, Integer pageSize, Integer categoryId, String state);
+
+    Article findById(Integer id);
+
+    void update(Article article);
+
+    void deleteById(Integer id);
+}
