@@ -1,0 +1,50 @@
+import { _decorator, Component, instantiate, math, Node, Prefab } from 'cc';
+import { Pipe } from './Pipe';
+const { ccclass, property } = _decorator;
+
+@ccclass('PipeSpawner')
+export class PipeSpawner extends Component {
+
+    @property(Prefab)
+    pipePrefab: Prefab = null;
+
+    @property
+    spawnRate: number = 0.5;
+
+    private timer: number = 0;
+    private _isSpawning: boolean = false;
+
+    update(deltaTime: number) {
+        if(this._isSpawning == false)return;
+        this.timer += deltaTime;
+        if (this.timer > this.spawnRate) {
+            // 生成管道
+            this.timer = 0;
+            const pipeInst = instantiate(this.pipePrefab);
+            this.node.addChild(pipeInst);
+            // 设置生成位置
+            const p = this.node.getWorldPosition();
+            pipeInst.setWorldPosition(p);
+            const y = math.randomRangeInt(-100, 200);
+            // 随机位置
+            const pLocal = pipeInst.getPosition();
+            pipeInst.setPosition(pLocal.x, y);
+        }
+    }
+
+    public pause(){
+        this._isSpawning = false;
+        const nodeArray = this.node.children;
+        for(let i = 0; i < nodeArray.length; i++){
+            const pipe = nodeArray[i].getComponent(Pipe);
+            if(pipe){
+                pipe.enabled = false;
+            }
+        }
+    }
+    public start(){
+        this._isSpawning = true;
+    }
+}
+
+
